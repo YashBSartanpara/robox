@@ -27,6 +27,7 @@ const Robox = (Comp) => {
         flexNone,
         order,
         style,
+        compRef,
         ...props
       } = this.props
       const _style = createUnderstyle(config)
@@ -59,7 +60,7 @@ const Robox = (Comp) => {
         ...style
       }
 
-      return <Comp {...props} style={sx} />
+      return <Comp ref={compRef} {...props} style={sx} />
     }
   }
 
